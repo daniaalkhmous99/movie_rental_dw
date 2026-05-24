@@ -16,7 +16,7 @@ def draw_table(ax, x, y, title, columns, color, width=2.8):
         ax.text(x + 0.15, y - (i+1)*row_h + row_h/2, col, ha='left', va='center', fontsize=7.5, color='#333333')
 
 draw_table(ax, 4.5, 7.5, 'fact_rental', ['rental_id PK', 'date_key FK', 'customer_key FK', 'film_key FK', 'store_key FK', 'staff_key FK', 'rental_duration_days', 'is_late', 'late_days'], '#e74c3c')
-draw_table(ax, 4.5, 2.8, 'fact_payment', ['payment_id PK', 'date_key FK', 'customer_key FK', 'staff_key FK', 'rental_id', 'amount'], '#e67e22')
+draw_table(ax, 4.5, 2.8, 'fact_payment', ['payment_id PK', 'date_key FK', 'customer_key FK', 'store_key FK', 'staff_key FK', 'rental_id', 'amount'], '#e67e22')
 draw_table(ax, 0.3, 9.2, 'dim_date', ['date_key PK', 'full_date', 'day', 'month', 'quarter', 'year', 'is_weekend'], '#2980b9')
 draw_table(ax, 0.3, 5.5, 'dim_customer', ['customer_key PK', 'customer_id', 'full_name', 'email', 'city', 'country', 'active'], '#27ae60')
 draw_table(ax, 0.3, 2.2, 'dim_store', ['store_key PK', 'store_id', 'address', 'city', 'country'], '#8e44ad')
@@ -28,4 +28,8 @@ plt.title('Movie Rental Data Warehouse - Star Schema', fontsize=14, fontweight='
 plt.tight_layout()
 plt.savefig(r'C:\Users\User\OneDrive\Desktop\movie_rental_dw\diagrams\star_schema.png', dpi=150, bbox_inches='tight')
 plt.show()
-print("الداياغرام اتحفظ!")
+print("Star Schema saved!")
+
+
+
+
